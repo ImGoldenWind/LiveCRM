@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiveCRM</title>
+    <link rel="stylesheet" href="styles\indexstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.querySelector('.theme-toggle');
+    const body = document.body;
+
+    themeToggle.addEventListener('click', () => {
+        console.log('Theme toggle clicked');
+        const isDark = body.classList.toggle('light-theme');
+        themeToggle.innerHTML = isDark 
+            ? '<i class="fa-solid fa-sun"></i>' 
+            : '<i class="fa-solid fa-moon"></i>';
+    });
+});
+
+  </script>
+
+  <body>
+    <div class="sidebar">
+      <div class="logo">LiveCRM</div>
+      <ul class="menu">
+        <li class="menu-item active"><i class="fa fa-home"></i> Главная</li>
+        <li class="menu-item"><i class="fa fa-briefcase"></i> Сделки</li>
+        <li class="menu-item"><i class="fa fa-tasks"></i> Задачи</li>
+        <li class="menu-item"><i class="fa fa-phone"></i> Звонки</li>
+        <li class="menu-item"><i class="fa fa-file-invoice"></i> Счета</li>
+        <li class="menu-item"><i class="fa fa-calendar"></i> Календарь</li>
+        <li class="menu-item"><i class="fa fa-user"></i> Клиенты</li>
+        <li class="menu-item"><i class="fa fa-box"></i> Товары</li>
+        <li class="menu-item"><i class="fa fa-users"></i> Сотрудники</li>
+        <li class="menu-item"><i class="fa fa-chart-bar"></i> Аналитика</li>
+      </ul>
+
+      <script>
+        const themeToggle = document.querySelector(".theme-toggle");
+        const body = document.body;
+
+        themeToggle.addEventListener("click", () => {
+          const isDark = body.classList.toggle("light-theme");
+          themeToggle.innerHTML = isDark
+            ? '<i class="fa-solid fa-sun"></i>'
+            : '<i class="fa-solid fa-moon"></i>';
+        });
+      </script>
+
+      <div class="settings">
+        <span class="icon"><i class="fa-solid fa-gear"></i></span>
+        <span class="icon"><i class="fa-solid fa-question"></i></span>
+        <span class="icon theme-toggle"><i class="fa-solid fa-moon"></i></span>
+      </div>
+    </div>
+    <div class="content">
+      <header>
+        <h1>Здравствуйте, Пользователь</h1>
+        <p>Добро пожаловать! Сегодня "дата"</p>
+      </header>
+      <aside>
+        <div class="widget">
+          Задачи <br />
+          К выполнению: 0 <br />
+          Срочные: 0
+        </div>
+        <div class="widget">
+          Клиенты <br />
+          Новых: 0
+        </div>
+        <div class="widget">
+          Память <br />
+          Всего: 0 ГБ <br />
+          Остаток: 0 ГБ
+        </div>
+        <div class="widget">
+          Входящие звонки <br />
+          Принятые: 0 <br />
+          Пропущенные: 0
+        </div>
+        <div class="widget">
+          SMS <br />
+          Осталось: 0
+        </div>
+        <div class="widget">
+          Тариф "Название" <br />
+          Окончание: 01.01.2000
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
